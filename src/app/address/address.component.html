@@ -1,0 +1,26 @@
+<div class="parentAccordian" *ngFor="let ad of adList; let i = index;">
+    <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" (click)="panelOpenState == true?cardExpand(ad):''">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <!-- Address -->
+            </mat-panel-title>
+            <mat-panel-description class="panel-desc">
+              <span><mat-label>Address: </mat-label>{{ ad.address1 }}</span>
+              <span><mat-label>City: </mat-label>{{ ad.city }}</span>
+              <span><mat-label>State: </mat-label>{{ ad.state }}</span>
+              <span><mat-label>PostalCode: </mat-label>{{ ad.postalCode }}</span>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <form>
+            <input type="text" name="adrs" [(ngModel)]="addressForm.address1">    
+            <input type="text" name="cityName" [(ngModel)]="addressForm.city">
+            <input type="text" name="stateName" [(ngModel)]="addressForm.state" >
+            <input type="text" name="pcode" [(ngModel)]="addressForm.postalCode">
+            <button type="button" (click)="updateAddress(i, ad)">Update</button>
+            <button type="button" (click)="deleteAddress(i)">Delete</button>
+          </form>
+        </mat-expansion-panel>
+    </mat-accordion>
+    
+</div>

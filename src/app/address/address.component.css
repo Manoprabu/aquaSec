@@ -1,0 +1,33 @@
+  .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+  .parentAccordian {
+      padding: 10px;
+  }
+
+  mat-label {
+      padding-right: 10px;
+      font: bold;
+  }
+  .panel-desc > span {
+      padding-right: 25px;
+      color: black;
+  }
+  ::ng-deep .mat-expansion-panel-header-description, .mat-expansion-indicator::after {
+     color: red;
+  }
+  /* ::ng-deep div.mat-form-field-infix > span > mat-label > input {
+      padding-left: 25px !important;
+      width: auto !important;
+  }
+  ::ng-deep div.mat-form-field-infix { 
+    width: auto !important;
+  } */
+
+  form > input, button {
+    margin-left: 15px;
+  }
+
+  button {
+    cursor: pointer;
+  }
